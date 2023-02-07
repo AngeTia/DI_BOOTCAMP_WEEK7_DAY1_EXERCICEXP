@@ -35,7 +35,7 @@
     echo $years.' years - '.$month.' month - '.$days.' days';
   }
 
-  echo "La différence entre les deux dates est : $diff jours \n\n--> ";
+  echo "La différence entre les deux dates est : $diff jours"."</br></br>";
   convert( $diff);
   // Affichage du résultat
 ?>
