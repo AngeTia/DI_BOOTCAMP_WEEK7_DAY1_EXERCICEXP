@@ -34,8 +34,14 @@
     // Echo all information set
     echo $years.' years - '.$month.' month - '.$days.' days';
   }
-
+  echo "<------------------FIRST VERSION-------------------------------->"."<br><br>";
   echo "La différence entre les deux dates est : $diff jours"."</br></br>";
-  convert( $diff);
+  convert($diff);
   // Affichage du résultat
+  echo "<br><br>"."<------------------OPTIMISED VERSION----------------------->"."<br><br>";
+  $origin = new DateTimeImmutable('2000-11-22');
+  $target = new DateTimeImmutable('2023-02-07');
+  $difference = $origin->diff($target);
+  echo $difference->format('%y years, %m months, %d days');
+  echo "<br><br>"."<------------------OPTIMISED VERSION----------------------->"."<br><br>";
 ?>
