@@ -24,6 +24,18 @@
   // Appel de la méthode difference pour calculer la différence entre deux dates
   $diff = $calculatrice->difference("2022-01-01", "2022-12-31");
 
+  // Get date of the first day of the month
+  function convert($sum) {
+    $years = ($sum / 365) ;
+    $years = floor($years); 
+    $month = ($sum % 365) / 30.5; 
+    $month = floor($month); 
+    $days = ($sum % 365) % 30.5; // the rest of days
+    // Echo all information set
+    echo $years.' years - '.$month.' month - '.$days.' days';
+  }
+
+  echo "La différence entre les deux dates est : $diff jours \n\n--> ";
+  convert( $diff);
   // Affichage du résultat
-  echo "La différence entre les deux dates est : $diff jours";
 ?>
